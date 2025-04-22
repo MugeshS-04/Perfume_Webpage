@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FEEL IT!</h1>
+    <h2 id="top-view">HOME</h2>
+    <hr>
+
+    <ul id="menu">
+        <li>About</li>
+        <li>Trending</li>
+        <li>Home</li>
+        <li>Premium</li>
+        <li>Offers</li>
+        <li>Account</li>
+    </ul>
+
+
+    <script>
+        // Get the h2 and the list
+        const heading = document.getElementById('top-view');
+        const listItems = document.querySelectorAll('#menu li');
+
+        // Add event listener to each list item
+        listItems.forEach(item => {
+            item.addEventListener('click', () => {
+                heading.textContent = item.textContent;  // Change h2 text to clicked item's text
+            });
+        });
+    </script>
+    
+</body>
+</html>
